@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-nav {
+/* nav {
      display: flex;
      justify-content: space-around;
      align-items: center;
@@ -22,4 +22,9 @@ nav {
 .navStyle {
      text-decoration: none;
      color: white;
+} */
+
+.profile-img {
+     max-width: 200px;
+     max-height: 200px;
 }
