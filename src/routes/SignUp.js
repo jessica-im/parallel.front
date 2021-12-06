@@ -3,12 +3,14 @@ import { useState } from 'react';
 const SignUp = ({handleSignUp}) => {
      const [ username, setUsername ] = useState('');
      const [ password, setPassword ] = useState('');
+     const [ profile, setProfile ] = useState(null)
 
      const signUp = (event) => {
           event.preventDefault();
           let newUser = {
                username: username,
-               password: password
+               password: password,
+               profile: profile
           }
           handleSignUp(newUser);
      }
@@ -20,6 +22,7 @@ const SignUp = ({handleSignUp}) => {
      const handlePasswordChange = (event) => {
           setPassword(event.target.value);
      }
+
 
      return (
           <div>

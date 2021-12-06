@@ -13,8 +13,8 @@ const App = () => {
      const [ profiles, setProfiles ] = useState([]);
      const [ user, setUser ] = useState({});
 
-     const handleSignUp = (addUser) => {
-          axios.post('https://parallel-back.herokuapp.com/api/useraccount', addUser)
+     const handleSignUp = (newUser) => {
+          axios.post('https://parallel-back.herokuapp.com/api/useraccount', newUser)
           .then((response) => {
                if (response.data.username) {
                     setUser(response.data)
@@ -50,6 +50,7 @@ const App = () => {
      const handleFormSubmit = (event) => {
           event.preventDefault();
           axios.post('https://parallel-back.herokuapp.com/api/profile', {
+               user: user.id,
                name: newName,
                image: newImage,
                website: newWebsite

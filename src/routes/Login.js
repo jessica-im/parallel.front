@@ -25,7 +25,7 @@ const Login = ({handleLogin}) => {
      return (
           <div>
                <h1>Login</h1>
-               <form onSubmit={login}>
+               <form onSubmit={handleLogin}>
                     <label htmlFor="username">Username: </label>
                     <input type="text" name="username" onChange={handleUsernameChange} />
                     <label htmlFor="password">Password: </label>
